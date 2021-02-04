@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Button } from "antd";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 const routes = require("../config/router.config");
 import "./index.less";
@@ -50,7 +49,7 @@ const renderRoutes = (routes: Array<IRouterItem>) =>
 
 ReactDOM.render(
   <Router>
-    {renderRoutes(routes)} <Button>123</Button>
+    {renderRoutes(routes)}
   </Router>,
   document.getElementById("root")
 );
