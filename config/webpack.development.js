@@ -31,7 +31,7 @@ module.exports = {
         use: ["babel-loader"],
       },
       {
-        test: /\.css/,
+        test: /\.css$/,
         use: [
           { loader: "style-loader" },
           {
@@ -52,7 +52,7 @@ module.exports = {
           { loader: "style-loader" },
           {
             loader: "css-loader",
-            options: { importLoaders: 0 },
+            options: { importLoaders: 2 },
           },
           {
             loader: "postcss-loader",
@@ -65,7 +65,7 @@ module.exports = {
           {
             loader: "less-loader",
             options: {
-              lessOptions: { importLoaders: 1, javascriptEnabled: true },
+              lessOptions: { javascriptEnabled: true },
             },
           },
         ],

@@ -1,10 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {Button} from "antd";
+import { Button } from "antd";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 const routes = require("../config/router.config");
-// import 'antd/dist/antd.less';
-import './index.less'
+import "./index.less";
 
 interface IRouterItem {
   path: string;
@@ -12,6 +11,7 @@ interface IRouterItem {
   routes?: IRouterItem[];
   exact?: boolean;
 }
+
 interface IRouteComponent {
   history?: any;
   location: any;
@@ -36,8 +36,8 @@ const renderRoutes = (routes: Array<IRouterItem>) =>
           path={path}
           exact={exact}
           render={(routeProps) => {
-            // @ts-ignore
-              return (
+            return (
+              // @ts-ignore
               <RouteComponent<IRouteComponent> {...routeProps}>
                 <Switch>{renderRoutes(childrenRoutes)}</Switch>
               </RouteComponent>
@@ -49,7 +49,9 @@ const renderRoutes = (routes: Array<IRouterItem>) =>
   );
 
 ReactDOM.render(
-  <Router>{renderRoutes(routes)} <Button>123</Button></Router>,
+  <Router>
+    {renderRoutes(routes)} <Button>123</Button>
+  </Router>,
   document.getElementById("root")
 );
 

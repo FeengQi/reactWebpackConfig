@@ -34,6 +34,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
       minify: {
+        // @ts-ignore
         minimize: true,
         inject: true,
         // 是否对大小写敏感，默认false

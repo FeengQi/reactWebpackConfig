@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { useRequest } from "ahooks";
 import { changeUsername } from "@/services";
 import { message } from "antd";
-import styles from "./index.less";
+import styles from "./index.modules.less";
 
-const Index = () => {
+const Index: React.FC = () => {
   const [state, setState] = useState("");
   const { loading, run } = useRequest(changeUsername, {
     manual: true,
