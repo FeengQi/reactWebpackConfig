@@ -33,7 +33,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.less$/, //处理less
+        test: /\.less$/,
         use: [
           MiniCssExtractPlugin.loader,
           {

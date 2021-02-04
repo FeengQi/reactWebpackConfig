@@ -1,12 +1,12 @@
 module.exports = [
   {
-    path: "/", //路径
+    path: "/",
     component: require("@/pages/index").default,
   },
   {
-    path: "/", //路径
-    exact: true, //是否精确匹配
-    component: require("@/layouts/UserLayout").default, //要渲染的组件 @ src路径别名
+    path: "/",
+    exact: true,
+    component: require("@/layouts/UserLayout").default,
     routes: [
       {
         name: "登录",

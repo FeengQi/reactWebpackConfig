@@ -5,14 +5,12 @@ module.exports = {
   devtool: "source-map",
   devServer: {
     open: true,
-    hot: true, //热更新插件 构建的时候如果只有一个模块变化，那么只构建这一个模块，其他模块用缓存，极大提升构建速度，体验更
-    contentBase: path.join(__dirname, "dist"), //静态文件根目录
+    hot: true,
+    contentBase: path.join(__dirname, "dist"),
     compress: true,
-    // colors: true, //终端中输出结果为彩色
-    historyApiFallback: true, //不跳转
-    inline: true, //实时刷新
+    historyApiFallback: true,
+    inline: true,
     proxy: {
-      // 代理到后端的服务地址，会拦截所有以api开头的请求地址
       "/api": "http://localhost:3000",
     },
   },
@@ -47,7 +45,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.less$/, //处理less
+        test: /\.less$/,
         use: [
           { loader: "style-loader" },
           {

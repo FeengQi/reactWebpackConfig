@@ -54,7 +54,3 @@ ReactDOM.render(
   </Router>,
   document.getElementById("root")
 );
-
-/**
- * 渲染Route有三种方式 component render children
- */
