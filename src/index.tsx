@@ -50,7 +50,7 @@ const renderRoutes = (routes: Array<IRouterItem>) =>
 
 ReactDOM.render(
   <Router>
-    {renderRoutes(routes)} <Button>123</Button>
+    {renderRoutes(routes)}
   </Router>,
   document.getElementById("root")
 );
