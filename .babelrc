@@ -1,7 +1,25 @@
 {
   "presets": ["@babel/preset-react", "@babel/preset-env"],
   "plugins": [
-    ["@babel/plugin-proposal-decorators", { "legacy": true }],
-    ["transform-class-properties", { "spec": true }]
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    [
+      "transform-class-properties",
+      {
+        "spec": true
+      }
+    ],
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "libraryDirectory": "es",
+        "style": true
+      }
+    ]
   ]
 }
